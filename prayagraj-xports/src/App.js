@@ -4,7 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { ThemeProvider } from "styled-components";
-
+import GlobalStyles from "./styles/GlobalStyles";
+import { dark, light } from "./styles/Themes";
 import Loader from "./components/Loader";
 import Home from "./sections/Home";
 
@@ -21,6 +22,8 @@ function App() {
 
   return (
     <>
+     <GlobalStyles />
+     <ThemeProvider theme={dark}>
         <LocomotiveScrollProvider
           options={{
             smooth: true,
@@ -50,6 +53,7 @@ function App() {
             </AnimatePresence>
           </main>
         </LocomotiveScrollProvider>
+      </ThemeProvider>
     </>
   );
 }
