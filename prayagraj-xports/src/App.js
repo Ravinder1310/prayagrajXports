@@ -1,5 +1,4 @@
 import "locomotive-scroll/dist/locomotive-scroll.css";
-
 import { AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -10,6 +9,7 @@ import Loader from "./components/Loader";
 import Home from "./sections/Home";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import About from "./sections/About";
+import Marquee from "./sections/Marquee";
 
 function App() {
   // useLocoScroll();
@@ -53,6 +53,8 @@ function App() {
               {Loaded ? null : <Loader />}
               <Home key="home" />
               <About key="about" />
+              <Marquee key="marquee" />
+              <NewArrival key="new arrival" />
             </AnimatePresence>
           </main>
         </LocomotiveScrollProvider>
