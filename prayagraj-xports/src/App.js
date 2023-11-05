@@ -10,6 +10,8 @@ import Home from "./sections/Home";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 import About from "./sections/About";
 import Marquee from "./sections/Marquee";
+import NewArrival from "./sections/NewArrival";
+import Footer from "./sections/Footer";
 
 function App() {
   // useLocoScroll();
@@ -55,6 +57,7 @@ function App() {
               <About key="about" />
               <Marquee key="marquee" />
               <NewArrival key="new arrival" />
+              <Footer key="footer" />
             </AnimatePresence>
           </main>
         </LocomotiveScrollProvider>
