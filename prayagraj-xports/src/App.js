@@ -8,6 +8,8 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { dark, light } from "./styles/Themes";
 import Loader from "./components/Loader";
 import Home from "./sections/Home";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
+import About from "./sections/About";
 
 function App() {
   // useLocoScroll();
@@ -46,10 +48,11 @@ function App() {
         >
           <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence>
           <main className="App" data-scroll-container ref={containerRef}>
+          <ScrollTriggerProxy />
             <AnimatePresence>
               {Loaded ? null : <Loader />}
-
               <Home key="home" />
+              <About key="about" />
             </AnimatePresence>
           </main>
         </LocomotiveScrollProvider>
